@@ -37,6 +37,9 @@ void insert(string element) // Insert a node in the binary search tree
 
 	Node* parent = NULL;
 	Node* currentNode = NULL;
-	search(element, parent, currentNode); // Locate the node which will be the parent of the node to be inserted
-}
-
+	search(element, parent, currentNode); // Locate the node which will be the parent of the node to be inserted
+	if (parent == NULL) // if the parent is NULL (Tree is empty)
+	{
+		ROOT = newNode; // Mark the new node as ROOT
+		return; // Exit
+	}
