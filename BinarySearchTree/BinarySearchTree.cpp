@@ -80,8 +80,10 @@ void inorder(Node* ptr)
 	}
 	if (ptr != NULL)
 	{
+		inorder(ptr->leftchild);
 		cout << ptr->info << " ";
-		preorder(ptr->leftchild);
-		preorder(ptr->rightchild);
+		inorder(ptr->rightchild);
 	}
 }
+		
+	
